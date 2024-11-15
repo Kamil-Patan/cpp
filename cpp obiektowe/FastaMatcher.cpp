@@ -66,3 +66,17 @@ void FastaMatcher::find_matches_with_k_differences(const std::string &motif, con
         }
     }
 }
+
+void FastaMatcher::count_nucleotides(const std::string &seq){
+
+    std::map<char, int> nucleotide_count;
+
+    for (char base : seq) {
+        nucleotide_count[base]++;
+    }
+
+    std::cout << "Letter counts:\n";
+    for (const auto& pair : nucleotide_count) {
+        std::cout << pair.first << " - " << pair.second << std::endl;
+    }
+}

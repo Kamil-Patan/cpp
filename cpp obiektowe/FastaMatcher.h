@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <map>
 
 class FastaMatcher {
 private:
@@ -30,6 +31,8 @@ public:
     int count_differences(const std::string &motif, const std::string &seq);
 
     void find_matches_with_k_differences(const std::string &motif, const std::string &seq, int k);
+
+    void count_nucleotides(const std::string &seq);
 };
 
 #endif
